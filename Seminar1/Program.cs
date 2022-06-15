@@ -134,3 +134,61 @@ int WeekDays ()
 
 }
 */
+
+
+ДЗ к СЕМИНАРУ 
+
+1 ЗАДАЧА:
+
+/*
+int FindPolindrom ()
+{
+    int num;
+    Console.WriteLine ("Введите пятизначное число: ");
+    num = Convert.ToInt32(Console.ReadLine());
+    
+    int num5 = num % 10;
+    int num4 = num % 100;
+    int num2 = num % 1000;
+    int num1 = num % 10000;
+
+        if(num1 == num5 && num2 == num4)
+        {
+        Console.WriteLine("True");
+        }
+         else
+        {
+        Console.WriteLine("False");
+        }
+}
+FindPolindrom(num);
+*/
+
+2 ЗАДАЧА:
+
+/*
+double FindLenght(double xA, double yA, double zA, double xB, double yB, double zB)
+{
+    Convert.ToDouble()
+    return Math.Pow((xA - xB),2) + Math.Pow((yA - yB),2) + Math.Pow((zA - zB),2);
+}
+*/
+
+3 ЗАДАЧА:
+
+/*
+void Cube(int num)
+{
+    int current = 1;
+    while (current <= num)
+    {
+        Console.Write((current * current * current) + " ");
+        current++;
+    }
+}
+
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Cube(num);
+*/
