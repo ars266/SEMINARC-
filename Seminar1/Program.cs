@@ -192,3 +192,35 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 Cube(num);
 */
+
+/*
+ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 4
+
+ЗАДАЧА 1:
+
+int Stepen (int a, int b);
+int current = 1; current ++;
+while (current <= b)
+{
+Console.WriteLine(a * a);
+}
+
+Думаю, задача решена неверно
+*/
+
+
+/*
+ЗАДАЧА 2:
+
+int size = 8;
+int[] array = new int[size];
+
+for (int i = 0; i < size; i = i + 1)
+{
+    array[i] = new Random().Next(0,1000);
+}
+for (int i = 0; i < size; i = i + 1)
+{
+    Console.WriteLine(array[i] + " ");
+}
+*/
