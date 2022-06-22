@@ -224,3 +224,103 @@ for (int i = 0; i < size; i = i + 1)
     Console.WriteLine(array[i] + " ");
 }
 */
+
+
+
+
+
+
+
+
+/*ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 5
+*/
+/*ЗАДАЧА 1:*/
+
+/*
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i ++)
+    {
+        newArray[i] = new Random().Next(min = 100, max = 1000);
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+int FindCountEvenSum(int[] array,int min, int max)
+{
+    int count = 0;
+    for( int i = 0; i < array.Length; i++)
+    {
+        if(array[i] % 2 == 0) count ++;
+    }
+    return count;
+}
+*/
+
+/*ЗАДАЧА 2:*/
+
+/*
+int[] CreateRandomArray(int size, int min, int max)
+{
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i ++)
+    {
+        newArray[i] = new Random().Next(min, max + 1);
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+int FindSumNotEvenNum(int[] array,int min, int max, int step = 2)
+{
+    int sum = 0;
+    for( int i = 1; i < array.Length; i + step)
+    {
+        if(array[i] % 2 == 1) sum ++;
+    }
+    return sum;
+}
+*/
+
+/*ЗАДАЧА 3:*/
+
+/*double[] CreateRandomDoubleArray(int size)
+{
+    double[] newArray = new double[size];
+    for(int i = 0; i < size; i ++)
+    {
+        newArray[i] = new Random().NextDouble();
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+}
+
+int FindвDifMaxMin(double[] array, double min, double max, double result)
+{
+    double minNumber = array[i];
+    double maxNumber = array[i];
+
+    for( int i = 0; i < array.Length; i ++)
+    {
+        if(array[i] < minNumber)
+        {
+            minNumber = array[i];
+        }
+        if(array[i] < maxNumber)
+        {
+            maxNumber = array[i];
+        }
+        
+    }
+    Console.WriteLine(maxNumber);
+    Console.WriteLine(minNumber);
+
+    double maxNumber - double minNumber = result;
+    return resalt;
+}
+*/
