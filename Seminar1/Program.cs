@@ -324,3 +324,29 @@ int FindвDifMaxMin(double[] array, double min, double max, double result)
     return resalt;
 }
 */
+
+
+
+
+
+ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 6
+
+ЗАДАЧА 1:
+
+int FindNum(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] > 0) count++;
+    }
+    return count;
+}
+
+Console.WriteLine ("Введите любое количество целых чисел: ");
+int array = Convert.ToInt32(Console.ReadLine());
+
+
+
+ЗАДАЧА 2:
+vnvvn
