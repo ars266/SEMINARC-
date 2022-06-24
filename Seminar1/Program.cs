@@ -349,4 +349,16 @@ int array = Convert.ToInt32(Console.ReadLine());
 
 
 ЗАДАЧА 2:
-vnvvn
+
+int ArrayCopy(int[] FirsArray, int[] SecondArray, int size)
+{
+    int[] FirstArray = new int[size];
+    for(int i = 0; i <size; i ++);
+    int[] SecondArray = new int[size];
+    for(int j = 0; j <size; j ++);
+    {
+        [j] == [i]; if ++; j ++;
+    }
+    return SecondArray;
+
+}
