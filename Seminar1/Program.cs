@@ -327,7 +327,7 @@ int FindвDifMaxMin(double[] array, double min, double max, double result)
 
 
 
-
+/*
 
 ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 6
 
@@ -361,4 +361,70 @@ int ArrayCopy(int[] FirsArray, int[] SecondArray, int size)
     }
     return SecondArray;
 
+}
+*/
+
+
+/*ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 7
+
+ЗАДАЧА 1:
+Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.*/
+
+double[,] CreateTwoArray(double n, double m, double min, double max)
+{
+double[,] newMatrix = new double (n,m);
+for(double i = 0; i < n; i++)
+{
+    for(double j = 0; j < m; j++)
+    {
+        newMatrix[i,j] = new Random().NextDouble(min, max + 1);
+        Console.Write(newMatrix[i,j] + " ")
+    }
+    Console.WriteLine();
+}
+return newMatrix;
+}
+
+
+ЗАДАЧА 2:
+Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
+и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+int[,] NewMatrix(int a, int b)
+{
+    int[,] newMatrix = new int[a,b];
+    for(int i = 0; i < a; i++)
+    {
+        for(int j = 0; j < b; j++)
+        {
+            if
+            {
+                [i] < a && [j] < b;
+            }
+            else
+            {
+                return Console.WriteLine (" Такого элемента нет ")
+            }
+        }
+    Console.WriteLine();
+    }
+    return newMatrix;
+}
+
+
+ЗАДАЧА 3:
+Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+int[,] CreateArrayIntegSumСolumns(int a, int b)
+{
+
+int[,] newMatrix = new int (a,b);
+ for(int i = 0; i < a; i++)
+ {
+    for(int j = 0; j < a; j++)
+    {
+      while j < b
+      (for(i = 0; i < array.Get.Length; i++)) / a;
+    }
+ }
 }
