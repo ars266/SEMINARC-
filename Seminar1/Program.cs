@@ -428,3 +428,121 @@ int[,] newMatrix = new int (a,b);
     }
  }
 }
+
+
+
+
+
+/*ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 8*/
+
+/*ЗАДАЧА 1:
+Задайте двумерный массив. 
+Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива.*/
+
+int[,] CreateTwoDimArray(int m, int n, int min, int max)
+{
+    int[,] array = new int[m,n];
+ 
+    for(int i = 0; i < m; i++)
+        for(int j = 0; j < n; j++)
+        array[i,j] = new Random().Next(min, max + 1);
+ 
+    return array;
+}
+ 
+void ShowArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i,j] + " ");
+        Console.WriteLine();
+    }
+}
+int BubbleSorting(int numbers j, int temp, int rows)
+{
+    for(int j = 0; j < rows.GetLength(0); j++)
+    {
+        for(int k = 0; k < rows.GetLength - 1; k++)
+        {
+            if(j [k] > j[k + 1])
+            {
+                temp = [k];
+                [j] = [j +1];
+                [j + 1] = temp;
+ 
+            }
+        }
+    }
+    for(int j = 0; j < rows.GetLength(0); j++){
+       Console.WriteLine(j); 
+    }
+}
+
+int[,] myArray = CreateTwoDimArray(5,8,1,9);
+ShowArray(myArray);
+int BubbleSorting(int numbers j, int temp, int rows)
+
+
+
+/*ЗАДАЧА 2:
+
+Задайте прямоугольный двумерный массив.
+Напишите программу, которая будет находить строку с наименьшей суммой элементов.*/
+
+int[,] CreateTwoDimArray(int m, int n, int min, int max)
+{
+    int[,] array = new int[m,n];
+ 
+    for(int i = 0; i < m; i++)
+        for(int j = 0; j < n; j++)
+        array[i,j] = new Random().Next(min, max + 1);
+ 
+    return array;
+}
+
+void ShowArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i,j] + " ");
+        Console.WriteLine();
+    }
+}
+
+int[,] myArray = CreateTwoDimArray(3,4,1,9);
+ShowArray(myArray);
+
+int sum, count, result;
+count = 0;
+for(int i = 0; i < array.GetLength(0); i++)
+{
+    while(count <= j - 1)
+    {
+        sum = 0; count = [j]; j++; 
+        sum = sum + count;
+    }
+}
+ 
+
+ 
+min = sum1;
+if(sum1 > sum2) min = sum2;
+if(sum2 > sum3) min = sum3;
+result = min;
+
+/*Не понимаю, как дальше правильно вывести код в нужное направление.
+Есть такой вариант:
+i = 0,j = 0; j < n; j ++;
+
+i = 1; j[n-1] i < m; i ++;
+
+i = m - 1; j > 0; j --;
+
+i = m - 2; i > 0;i ++
+
+i =1; j = 1; j+1;
+
+i = 2; j = 1;
+*/
