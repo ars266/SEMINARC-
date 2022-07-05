@@ -370,7 +370,7 @@ int ArrayCopy(int[] FirsArray, int[] SecondArray, int size)
 ЗАДАЧА 1:
 Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.*/
 
-double[,] CreateTwoArray(double n, double m, double min, double max)
+/*double[,] CreateTwoArray(double n, double m, double min, double max)
 {
 double[,] newMatrix = new double (n,m);
 for(double i = 0; i < n; i++)
@@ -384,8 +384,9 @@ for(double i = 0; i < n; i++)
 }
 return newMatrix;
 }
+*/
 
-
+/*
 ЗАДАЧА 2:
 Напишите программу, которая на вход принимает позиции элемента в двумерном массиве,
 и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -410,8 +411,9 @@ int[,] NewMatrix(int a, int b)
     }
     return newMatrix;
 }
+*/
 
-
+/*
 ЗАДАЧА 3:
 Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
@@ -429,6 +431,8 @@ int[,] newMatrix = new int (a,b);
  }
 }
 
+*/
+
 
 
 
@@ -439,6 +443,7 @@ int[,] newMatrix = new int (a,b);
 Задайте двумерный массив. 
 Напишите программу, которая упорядочит по возрастанию элементы каждой строки двумерного массива.*/
 
+/*
 int[,] CreateTwoDimArray(int m, int n, int min, int max)
 {
     int[,] array = new int[m,n];
@@ -459,90 +464,139 @@ void ShowArray(int[,] array)
         Console.WriteLine();
     }
 }
-int BubbleSorting(int numbers j, int temp, int rows)
+int[,] BubbleSorting(int[,] array)
 {
-    for(int j = 0; j < rows.GetLength(0); j++)
+    for(int i = 0; i < array.GetLength(0); i++)
     {
-        for(int k = 0; k < rows.GetLength - 1; k++)
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            if(j [k] > j[k + 1])
+          for(int k = 0; k < array.GetLength(1)-1; k++)
+          {
+            if(array[i,k] < array[i,k + 1])
             {
-                temp = [k];
-                [j] = [j +1];
-                [j + 1] = temp;
- 
+                int temp = array[i, k+1];
+                array[i,k+1] = array[i,k];
+                array[i,k] = temp;
             }
         }
     }
-    for(int j = 0; j < rows.GetLength(0); j++){
-       Console.WriteLine(j); 
-    }
 }
-
+return array;
+}
+ 
 int[,] myArray = CreateTwoDimArray(5,8,1,9);
 ShowArray(myArray);
-int BubbleSorting(int numbers j, int temp, int rows)
+Console.WriteLine();
+ShowArray(BubbleSorting(myArray));
+*/
 
 
+/* СЕМИНАР 9:*/
 
-/*ЗАДАЧА 2:
+/*Найти все числа от 1 до n:
 
-Задайте прямоугольный двумерный массив.
-Напишите программу, которая будет находить строку с наименьшей суммой элементов.*/
-
-int[,] CreateTwoDimArray(int m, int n, int min, int max)
+void ShowNums(int n)
 {
-    int[,] array = new int[m,n];
- 
-    for(int i = 0; i < m; i++)
-        for(int j = 0; j < n; j++)
-        array[i,j] = new Random().Next(min, max + 1);
- 
-    return array;
-}
-
-void ShowArray(int[,] array)
-{
-    for(int i = 0; i < array.GetLength(0); i++)
+    if(n !=1)
     {
-        for(int j = 0; j < array.GetLength(1); j++)
-        Console.Write(array[i,j] + " ");
-        Console.WriteLine();
+        ShowNums(n-1);
     }
+    Console.Write(n + " ");
 }
+Console.WriteLine("Введите целое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-int[,] myArray = CreateTwoDimArray(3,4,1,9);
-ShowArray(myArray);
+ShowNums(num);
+*/
 
-int sum, count, result;
-count = 0;
-for(int i = 0; i < array.GetLength(0); i++)
+
+/*Вывести числа от m до n, где m - меньшее число, а n - большее.*/
+/*
+void ShowNums(int n, int m)
 {
-    while(count <= j - 1)
+    if(n !=m)
     {
-        sum = 0; count = [j]; j++; 
-        sum = sum + count;
+        ShowNums(n-1, m);
     }
+    Console.Write(n + " ");
 }
- 
+Console.WriteLine("Введите целое число: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
- 
-min = sum1;
-if(sum1 > sum2) min = sum2;
-if(sum2 > sum3) min = sum3;
-result = min;
+Console.WriteLine("Введите целое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
 
-/*Не понимаю, как дальше правильно вывести код в нужное направление.
-Есть такой вариант:
-i = 0,j = 0; j < n; j ++;
+ShowNums(n, m);
+*/
 
-i = 1; j[n-1] i < m; i ++;
+/*Написать программу, которая на вход будет принимать число, и будет возвращать сумму ёё цифр.*/
+/*
+int Sum (int num)
+{
+    if (num == 0)
+        return 0;
+    return num % 10 + Sum (num / 10);    
+}
 
-i = m - 1; j > 0; j --;
+Console.Write("Введите целое максимальное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-i = m - 2; i > 0;i ++
+Console.WriteLine(Sum(num));
+*/
 
-i =1; j = 1; j+1;
+/*Число А возвести в степень В*/
+/*
+int Degree (int A, int B)
+{
+    if (B!=0)
+        return A * Degree(A, B-1);
+    else return 1;    
+}
 
-i = 2; j = 1;
+Console.WriteLine("Введите число: ");
+int A = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите ещё одно число: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Degree(A,B));
+*/
+
+
+/*ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 9*/
+/*Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.*/
+
+/*
+void ShowSumNums(int n, int m)
+{
+    if(n !=m)
+    {
+        ShowSumNums(n-1, m);
+    }
+    Console.Write(n + " ");
+    return n + ShowSumNums(n-1);
+}
+Console.WriteLine("Введите целое число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите целое число: ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+ShowSumNums(n, m);
+*/
+
+
+/*Задача 67: Напишите программу, которая будет принимать на вход число и возвращать кол-во его цифр.*/
+/*
+int Quantity (int num)
+{
+    if (num == 0)
+        return 0;
+    return 1  + Quantity (num % 10);    
+}
+
+Console.Write("Введите целое максимальное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Quantity(num));
 */
