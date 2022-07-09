@@ -136,9 +136,10 @@ int WeekDays ()
 */
 
 
-ДЗ к СЕМИНАРУ 
+/*ДЗ к СЕМИНАРУ 
 
 1 ЗАДАЧА:
+*/
 
 /*
 int FindPolindrom ()
@@ -164,7 +165,8 @@ int FindPolindrom ()
 FindPolindrom(num);
 */
 
-2 ЗАДАЧА:
+/*2 ЗАДАЧА:
+*/
 
 /*
 double FindLenght(double xA, double yA, double zA, double xB, double yB, double zB)
@@ -174,7 +176,8 @@ double FindLenght(double xA, double yA, double zA, double xB, double yB, double 
 }
 */
 
-3 ЗАДАЧА:
+/*3 ЗАДАЧА:
+*/
 
 /*
 void Cube(int num)
@@ -600,3 +603,140 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(Quantity(num));
 */
+
+
+
+
+/*СЕМИНАР 10
+
+string[] names = {"Invan", "Anna", "Max", "Denis"};
+
+ Console.WriteLine(names [0][1]);
+ */
+
+/*ЗАДАЧА: Написать метод, который выводит количество строк слов из массива больше, чем 5 символов .
+*/
+
+/*
+string[] names = {"Invan", "Anna", "Max", "Denis"}; //сгенерировали 
+
+string[] CreateStringArreay (int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i ++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+
+}
+
+void ShowArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i ++)
+        Console.WriteLine(array[i] + " ");
+
+    Console.WriteLine();    
+}
+
+int NumberOfLongWords(string[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i].Length >= 5)
+            count++;
+
+    return count;        
+}
+
+Console.Write("Input number of names: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+string[] names = CreateStringArreay;
+
+Console.WriteLine("Number of long words is " + NumberOfLongWords(names));
+*/
+/*
+Задача:
+Написать программу, которая на вход принимает 2 массива строк и возвращает массив из попарно объединенных исходных элементов.
+*/
+
+string[] ArrayCombination(string [] array1, string [] array2)
+{
+    int minsize;
+    if (array1.Length > array2.Length)
+    {
+        minsize = array2.Length;
+        for(int i = 0; i < minsize; i++)
+            array1[i] += array2[i];
+        return array1;    
+    }
+    else
+    {
+        minsize = array1.Length;
+        for(int i = 0; i < minsize; i++)
+            array2[i] += array1[i];
+        return array2;    
+    }
+}
+
+/*Задача:
+Написать программу, которая считает количество слов, начинающихся на букву Y или W.
+*/
+
+string[] CreateStringArreay (int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i ++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+
+}
+
+void ShowArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i ++)
+        Console.WriteLine(array[i] + " ");
+
+    Console.WriteLine();    
+}
+
+int SymbolOfWords(string[] array, char a, char b)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i ++)
+        if (array[i][0] == a || array[i][0] == b)
+            count ++;
+    return count;        
+}
+Console.Write("Input the size of arrays: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input First Symbol: ");
+char a = Convert.ToChar(Console.ReadLine());
+Console.Write("Input Second Symbol: ");
+char b = Convert.ToChar(Console.ReadLine());
+string[] names = CreateStringArreay(size);
+Console.WriteLine(" " +  SymbolOfWords(names, a,b));
+Console.WriteLine(names[1].ToLower());
+
+
+
+
+/*ДОМАШНЕЕ ЗАДАНИЕ К СЕМИНАРУ 10*/
+
+/*Задача 1: Задайте массив строк. Напишите программу, считает кол-во слов в массиве, начинающихся на гласную букву.
+Пример: { "qwe", "wer", "ert", "rty", "tyu"} -> 1*/
+
+
+
+
+
+/*Задача 2: Задайте массив строк. Напишите программу, которая генерирует новый массив, объединяя элементы исходного массива попарно.
+Пример: { "qwe", "wer", "ert", "rty", "tyu", "yui"} -> { "qwewer", "ertrty", "tyuyui"}*/
+
+
+
