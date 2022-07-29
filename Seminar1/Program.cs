@@ -807,3 +807,65 @@ Console.WriteLine(names[1].ToLower());
 
 /* ИТОГОВАЯ КОНТРОЛЬНАЯ РАБОТА.*/
 
+string[] names = {"The", "Word", "is", "open", "to", "me"};
+
+string[] CreateStringArray(int size)
+{
+    string[] words = new string [size];
+    for(int i = 0; i < size; i++)
+    {
+        Console.WriteLine($"Input {i + 1} words: ");
+        words[i] = Console.ReadLine();
+    }
+    return words;
+}
+ 
+
+int NumberOfNeedSumbolWords(string[] array)
+{
+    int len = array.Length;
+    int count = 0;
+    for(int i = 0; i < len; i++)
+        if(array[i].Length < 4)
+            count++;
+    return count;
+}
+ 
+
+string[] FindWords(string[] array, int count)
+{
+    string[] myArray = new string [count];
+    int index = 0;
+    int size = array.Length;
+        for(int i = 0; i < size; i++)
+    {
+        int length = array[i].Length;
+        if (length < 4)
+        {
+            myArray[index] = array[i];
+            index++;
+        }
+    }
+    return myArray;
+}
+ 
+
+string PrintWords(string[] array)
+{
+    int length = array.Length;
+    string output = String.Empty;
+    for (int i = 0; i < length; i++)
+    {
+        output += ($"\"{array[i]}\"");
+    }
+    return output;
+}
+ 
+Console.Write("Input size of string: ");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] array1 = CreateStringArray(size);
+string input = PrintWords(array1);
+int count = NumberOfNeedSumbolWords(array1);
+string[] result = FindWords(array1, count);
+string output = PrintWords(result);
+Console.WriteLine($"the final result is {output}");
