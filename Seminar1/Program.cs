@@ -733,7 +733,7 @@ Console.WriteLine(names[1].ToLower());
 /*Задача 1: Задайте массив строк. Напишите программу, считает кол-во слов в массиве, начинающихся на гласную букву.
 Пример: { "qwe", "wer", "ert", "rty", "tyu"} -> 1*/
 
-string[] CreateStringArreay (int size)
+/*string[] CreateStringArreay (int size)
 {
     string[] words = new string [size];
     for(int i = 0; i < size; i ++)
@@ -783,7 +783,7 @@ Console.WriteLine(names[1].ToLower());
 /*Задача 2: Задайте массив строк. Напишите программу, которая генерирует массив, объединяя элементы исходного массива попарно.
 Пример: { "qwe", "wer", "ert", "rty", "tyu", "yui"} -> { "qwewer", "ertrty", "tyuyui"}*/
 
-string[] ArrayCombination(string [] arrayFirst, string [] arraySecond)
+/*string[] ArrayCombination(string [] arrayFirst, string [] arraySecond)
 {
     int minsize;
     if (arrayFirst.Length > arraySecond.Length)
@@ -801,4 +801,5 @@ string[] ArrayCombination(string [] arrayFirst, string [] arraySecond)
         return arraySecond;    
     }
 }
-
+*/
+Итоговая контрольная работа.
